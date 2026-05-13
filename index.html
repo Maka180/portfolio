@@ -97,34 +97,6 @@
   .project-link:hover::after { transform: translateX(4px); }
   .project-label { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); opacity: 0.6; }
 
-  /* Featured badge for live projects */
-  .project-live-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid rgba(201,168,76,0.4);
-    padding: 3px 10px;
-    margin-bottom: 14px;
-    background: rgba(201,168,76,0.06);
-  }
-  .project-live-badge::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #4caf50;
-    box-shadow: 0 0 6px #4caf50;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-  .project-links-row { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-
   .education { background: var(--navy-mid); }
   .edu-card { display: flex; gap: 40px; align-items: flex-start; padding: 40px; background: var(--navy); border-left: 2px solid var(--gold); max-width: 700px; }
   .edu-year { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); white-space: nowrap; padding-top: 4px; }
@@ -174,7 +146,6 @@
     .about-stats { grid-template-columns: 1fr 1fr; }
     .hero-cta { flex-direction: column; }
     .btn-primary, .btn-outline { text-align: center; }
-    .project-links-row { flex-direction: column; gap: 12px; }
   }
 </style>
 </head>
@@ -220,9 +191,9 @@
     </div>
     <div class="about-details reveal">
       <h2 class="section-title" style="margin-bottom:24px;">Driven by<br><em>Curiosity</em></h2>
-      <p class="about-text">I'm a graduating BSc IT &amp; Management student at Northwest University, passionate about building systems that solve real problems. From orphanage management to clinic systems, gym applications, and full-stack event platforms, I bring a full-stack mindset and a love for clean, functional solutions.</p>
+      <p class="about-text">I'm a graduating BSc IT &amp; Management student at Northwest University, passionate about building systems that solve real problems. From orphanage management to clinic systems and gym applications, I bring a full-stack mindset and a love for clean, functional solutions.</p>
       <div class="about-stats">
-        <div><div class="stat-num">5</div><div class="stat-label">Projects</div></div>
+        <div><div class="stat-num">4</div><div class="stat-label">Projects</div></div>
         <div><div class="stat-num">5+</div><div class="stat-label">Languages</div></div>
         <div><div class="stat-num">1</div><div class="stat-label">Certification</div></div>
       </div>
@@ -256,7 +227,6 @@
 
     <div class="project-card reveal">
       <div class="project-num">01</div>
-      <div class="project-live-badge">Live</div>
       <div class="project-date">2026</div>
       <h3 class="project-name">Luna Lift<br>Fitness App</h3>
       <p class="project-desc">A fully mobile-friendly fitness web app with exercise tracking, custom routine building, a progress diary, and workout player. Features category pages for glutes, upper body, and core &mdash; with playlist integration and localStorage persistence.</p>
@@ -266,10 +236,8 @@
         <span class="tech-tag">JavaScript</span>
         <span class="tech-tag">REST API</span>
       </div>
-      <div class="project-links-row">
-        <a href="https://maka180.github.io/Luna-lift/" target="_blank" class="project-link">Live App</a>
-        <a href="https://github.com/Maka180/Luna-lift" target="_blank" class="project-link" style="font-size:0.7rem; opacity:0.5;">Source Code</a>
-      </div>
+      <a href="https://maka180.github.io/Luna-lift/" target="_blank" class="project-link">Live App</a>
+<a href="https://github.com/Maka180/Luna-lift" target="_blank" class="project-link" style="margin-top:8px; font-size:0.7rem; opacity:0.5;">Source Code</a>
     </div>
 
     <div class="project-card reveal">
@@ -283,10 +251,9 @@
         <span class="tech-tag">MySQL</span>
         <span class="tech-tag">MongoDB</span>
       </div>
-      <div class="project-links-row">
-        <a href="https://github.com/Luhardt/CMPG323-Project" target="_blank" class="project-link">View on GitHub</a>
-        <span class="project-label">Academic Project</span>
-      </div>
+      <a href="https://github.com/Luhardt/CMPG323-Project" target="_blank" class="project-link">View on GitHub</a>
+      <span class="project-label" style="display:block; margin-top:10px;">Academic Project</span>
+    </div>
     </div>
 
     <div class="project-card reveal">
@@ -312,26 +279,6 @@
         <span class="tech-tag">MySQL</span>
       </div>
       <span class="project-label">Academic Project</span>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-num">05</div>
-      <div class="project-live-badge">Live</div>
-      <div class="project-date">2025 &ndash; 2026</div>
-      <h3 class="project-name">EventHub<br>Booking System</h3>
-      <p class="project-desc">A full-stack event booking platform with AI-powered description generation using Groq LLaMA, JWT authentication, password reset via email, and real-time event management. Features role-based access for attendees and organizers, deployed on Render &amp; Vercel.</p>
-      <div class="project-tech">
-        <span class="tech-tag">React</span>
-        <span class="tech-tag">Node.js</span>
-        <span class="tech-tag">MongoDB</span>
-        <span class="tech-tag">Groq AI</span>
-        <span class="tech-tag">REST API</span>
-        <span class="tech-tag">JWT</span>
-      </div>
-      <div class="project-links-row">
-        <a href="https://event-booking-system-ecru-eight.vercel.app/" target="_blank" class="project-link">Live App</a>
-        <a href="https://github.com/Maka180/event-booking-system" target="_blank" class="project-link" style="font-size:0.7rem; opacity:0.5;">Source Code</a>
-      </div>
     </div>
 
   </div>
@@ -377,6 +324,7 @@
 </footer>
 
 <script>
+  // Set email links via JS so Cloudflare cannot obfuscate them
   (function() {
     var u = 'makanakafarasi6';
     var d = 'gmail.com';
@@ -394,10 +342,12 @@
     });
   })();
 
+  // Nav toggle
   function toggleNav() {
     document.getElementById('nav-links').classList.toggle('open');
   }
 
+  // Scroll reveal
   var reveals = document.querySelectorAll('.reveal');
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry, i) {
@@ -409,6 +359,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(function(el) { observer.observe(el); });
 
+  // Active nav highlighting
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', function() {
